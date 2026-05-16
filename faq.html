@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perguntas Frequentes - BuildServer Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Perguntas Frequentes</h1>
+    <p>BuildServer Store • Central de Ajuda</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Qual é o prazo médio para a entrega de um servidor?</h2>
+      <p>
+        O prazo varia de acordo com a complexidade do plano contratado. Servidores focados em comunidades simples ou estruturas básicas costumam ser entregues em poucos dias, enquanto projetos avançados com múltiplos sistemas integrados demandam mais tempo de testes. O prazo exato será combinado antes do início do serviço.
+      </p>
+    </section>
+
+    <section>
+      <h2>Como funciona o processo após eu efetuar o pagamento?</h2>
+      <p>
+        Assim que o pagamento via Pix for confirmado, nossa equipe iniciará a fase de planejamento e execução da estrutura. O desenvolvimento pode ocorrer diretamente em um servidor de testes da nossa loja ou em um ambiente de sua preferência, conforme alinhado previamente com o desenvolvedor responsável.
+      </p>
+    </section>
+
+    <section>
+      <h2>Posso alterar a estrutura enquanto o desenvolvedor trabalha?</h2>
+      <p>
+        <strong>Não.</strong> Para garantir a integridade dos sistemas de permissões, cargos e bots, solicitamos que o cliente não realize modificações na infraestrutura ou nos canais durante o período de desenvolvimento. Alterações externas sem aviso prévio podem quebrar configurações e causar atrasos na entrega.
+      </p>
+    </section>
+
+    <section>
+      <h2>Vocês configuram servidores de qualquer nicho ou tema?</h2>
+      <p>
+        Desenvolvemos a grande maioria dos segmentos com foco em comunidades, jogos, e-commerce e criadores de conteúdo. Contudo, para preservar a segurança da nossa equipe, **não trabalhamos** com servidores voltados para conteúdo adulto (NSFW), apostas ilegais, distribuição de pirataria ou qualquer nicho que infrinja as diretrizes da plataforma Discord.
+      </p>
+    </section>
+
+    <section>
+      <h2>Como é feita a entrega oficial do projeto?</h2>
+      <p>
+        O projeto é considerado finalizado após a conclusão de todas as configurações e testes internos. A entrega oficial se dá através da transferência definitiva da posse (propriedade) do servidor Discord para a conta indicada por você, garantindo que o controle administrativo passe a ser inteiramente seu.
+      </p>
+    </section>
+
+    <section>
+      <h2>Terei suporte após a entrega do servidor?</h2>
+      <p>
+        O suporte padrão cobre a verificação técnica imediata do que foi entregue. Modificações futuras, novas criações de canais ou adições de bots que não constavam no pedido inicial após a transferência da posse não estão inclusas e devem ser orçadas como um serviço adicional.
+      </p>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section>
+      <h2>Essa central de ajuda foi útil?</h2>
+      <p>Esse artigo foi útil?</p>
+
+      <div id="feedback-box">
+        <button onclick="sendFeedback('sim')">Sim</button>
+        <button onclick="sendFeedback('nao')">Não</button>
+      </div>
+
+      <p id="feedback-msg" class="success-text" style="display:none;">
+        Obrigado por seu feedback!
+      </p>
+    </section>
+
+    <section>
+      <h2>Ainda precisa de ajuda?</h2>
+      <p>
+        Se a sua dúvida não foi listada nesta página, nossa equipe de suporte está pronta para atender você diretamente em nossa comunidade.
+      </p>
+      <p class="links-suporte">
+        <a href="termosdeuso.html">Termos de Uso</a> • 
+        <a href="termosdeservico.html">Termos de Serviço</a> • 
+        <a href="https://discord.gg/ektXyWvjNK" target="_blank" rel="noopener noreferrer">Discord</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© BuildServer Store - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function sendFeedback(type) {
+      document.getElementById("feedback-box").style.display = "none";
+      document.getElementById("feedback-msg").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

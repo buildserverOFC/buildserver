@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central de Documentos - BuildServer Store</title>
+  <!-- Mantido apenas o lobby.css para evitar conflitos de estilo -->
+  <link rel="stylesheet" href="lobby.css">
+</head>
+<body>
+
+  <header>
+    <h1>Central de Documentos</h1>
+    <p>BuildServer Store • Painel de Navegação</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Bem-vindo à nossa base de conhecimento</h2>
+      <p>
+        Para garantir a transparência, segurança e eficiência no desenvolvimento do seu projeto, disponibilizamos nossos termos oficiais e canais de ajuda. Recomendamos a leitura atenta dos documentos antes de realizar qualquer contratação.
+      </p>
+    </section>
+
+    <section>
+      <h2>Documentos e Termos Oficiais</h2>
+      <p>
+        Selecione o documento que deseja consultar para entender nossas regras de entrega, reembolso e segurança:
+      </p>
+      
+      <div id="feedback-box">
+        <a href="termosdeuso.html"><button type="button">Termos de Uso</button></a>
+        <a href="termosdeservico.html"><button type="button">Termos de Serviço</button></a>
+        <a href="faq.html"><button type="button">Perguntas Frequentes (FAQ)</button></a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Atendimento e Suporte Comercial</h2>
+      <p>
+        Deseja realizar um orçamento, tirar dúvidas específicas sobre um projeto ou abrir um chamado técnico? Acesse nosso servidor oficial do Discord e fale diretamente com a nossa equipe administrativa.
+      </p>
+      <p class="links-suporte">
+        <a href="https://discord.gg/ektXyWvjNK" target="_blank" rel="noopener noreferrer">Discord</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© BuildServer Store - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- O SCRIPT DO EFEITO DE ILUMINAÇÃO ENTRA EXATAMENTE AQUI -->
+  <script>
+    document.querySelectorAll('#feedback-box button').forEach(button => {
+      button.addEventListener('mousemove', e => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        button.style.setProperty('--mouse-x', `${x}px`);
+        button.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+  </script>
+
+</body>
+</html>

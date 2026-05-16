@@ -1,0 +1,213 @@
+/* BuildServer Store - Docs Hub (Animated Elite Dark with Global Screen Glow) */
+
+/* Animação de entrada da página */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação do brilho pulsante estático no topo */
+@keyframes pulseGlow {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background: #030407; /* Preto absoluto de fundo */
+  color: #f3f4f6;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+
+  /* LANTERNA GLOBAL: Segue o mouse por absolutamente toda a tela */
+  background-image: radial-gradient(
+    700px circle at var(--mouse-x, 50%) var(--mouse-y, 30%),
+    rgba(56, 139, 253, 0.04), /* Brilho azul sutil, padrão premium da Stripe/Vercel */
+    transparent 80%
+  );
+  background-attachment: fixed; /* Mantém a luz travada na tela mesmo ao rolar a página */
+}
+
+/* HEADER - Iluminação Neon Animada Fixa no Topo */
+header {
+  text-align: center;
+  padding: 100px 20px 60px 20px;
+  background: radial-gradient(circle at top, rgba(56, 139, 253, 0.12) 0%, transparent 55%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  position: relative;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at top, rgba(56, 139, 253, 0.06) 0%, transparent 40%);
+  animation: pulseGlow 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+header h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1px;
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+header p {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #626f84;
+  letter-spacing: -0.1px;
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.1s;
+}
+
+/* CONTEÚDO */
+main {
+  max-width: 720px;
+  margin: auto;
+  padding: 40px 20px;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.2s;
+}
+
+/* SEÇÕES */
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  color: #58a6ff;
+}
+
+p {
+  font-size: 15px;
+  color: #868d99;
+  margin-bottom: 24px;
+}
+
+/* GRID DE CARD-LINKS */
+#feedback-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+#feedback-box a {
+  text-decoration: none;
+  width: 100%;
+}
+
+/* CARDS DE NAVEGAÇÃO TRANSLÚCIDOS (Deixam a luz do fundo passar por eles) */
+#feedback-box button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 22px 28px;
+  background: rgba(255, 255, 255, 0.01); /* Quase invisível para revelar o efeito do body */
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: #e1e4ea;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  
+  transition: 
+    background 0.3s ease,
+    border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Efeito Hover nos Cards */
+#feedback-box button:hover {
+  background: rgba(255, 255, 255, 0.03); /* Destaca levemente o card focado */
+  border-color: rgba(56, 139, 253, 0.35); /* A borda ganha foco cirúrgico */
+  color: #ffffff;
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Clique mecânico */
+#feedback-box button:active {
+  transform: translateY(-1px) scale(0.99);
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 0.1s ease;
+}
+
+/* Seta (→) */
+#feedback-box button::after {
+  content: '→';
+  font-size: 18px;
+  color: #484f58;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+#feedback-box button:hover::after {
+  color: #58a6ff;
+  transform: translateX(6px);
+}
+
+/* BOTÃO DE SUPORTE */
+.links-suporte a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 18px 32px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.2px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.links-suporte a:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.08);
+}
+
+.links-suporte a:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 80px 20px 60px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  font-size: 12px;
+  color: #3e444d;
+}

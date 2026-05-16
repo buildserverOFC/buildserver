@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Serviço - BuildServer Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="termosdeservico.css"
+</head>
+<body>
+
+  <header>
+    <h1>Termos de Serviço</h1>
+    <p>BuildServer Store • Diretrizes e Segurança da Equipe</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>1. Diretrizes de Conteúdo e Restrições Estruturais</h2>
+      <p>
+        A BuildServer Store atua sob rígidos padrões éticos e de conformidade com as diretrizes da comunidade do Discord. Sob nenhuma circunstância nossa equipe realizará a criação, configuração ou estruturação de servidores voltados para:
+      </p>
+      <p>
+        • Conteúdo adulto, pornográfico ou estritamente NSFW (Not Safe For Work);<br>
+        • Atividades de apostas ilegais, cassinos virtuais não regulamentados ou esquemas financeiros;<br>
+        • Comunidades que promovam discursos de ódio, discriminação, assédio ou qualquer atividade ilícita;<br>
+        • Comercialização ou distribuição de produtos digitais pirateados, ferramentas de invasão (cracks/hacks) ou fraudes.
+      </p>
+      <div class="callout callout-danger">
+        <strong>Bloqueio Imediato:</strong> Caso seja constatado que o cliente omitiu a real intenção ou nicho do servidor para contornar esta regra, o serviço será cancelado imediatamente, sem direito a qualquer tipo de reembolso pelo tempo de desenvolvimento já investido.
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Segurança e Integridade da Equipe</h2>
+      <p>
+        Exigimos um ambiente de respeito mútuo durante todo o processo de atendimento e execução do projeto. Não toleramos comportamentos abusivos, hostis ou ameaças direcionadas aos nossos desenvolvedores e atendentes.
+      </p>
+      <p>
+        O uso de linguagem ofensiva, pressão desproporcional fora dos prazos estipulados ou tentativas de difamação infundada resultarão no encerramento unilateral do atendimento, e o caso será avaliado junto às instâncias administrativas da loja.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Modificações na Infraestrutura Durante a Criação</h2>
+      <p>
+        Durante o período de desenvolvimento, a equipe necessita de total autonomia técnica dentro do servidor de testes ou do servidor final. 
+      </p>
+      <p>
+        O cliente compromete-se a **não alterar permissões, cargos, bots ou estruturas de canais** enquanto o desenvolvedor responsável estiver executando o serviço, exceto se houver uma orientação explícita. Alterações não autorizadas por parte do cliente podem corromper sistemas, desconfigurar permissões e causar atrasos severos nos prazos, invalidando o cronograma de entrega originalmente combinado.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Autoria e Créditos do Desenvolvimento</h2>
+      <p>
+        A BuildServer Store reserva-se o direito de manter uma assinatura sutil em um canal de créditos ou nas descrições de sistemas automatizados desenvolvidos internamente (como painéis e embeds), identificando a autoria da estrutura criada.
+      </p>
+      <p>
+        A remoção completa ou ocultação intencional destes créditos de autoria após a entrega do servidor viola os nossos termos de propriedade intelectual do projeto original, resultando na perda permanente de suporte e assistência futura por parte da nossa loja.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Alterações nos Termos</h2>
+      <p>
+        A BuildServer Store reserva-se o direito de atualizar ou modificar estes Termos de Serviço a qualquer momento para adequar novas ferramentas de segurança ou políticas internas. Recomendamos a consulta periódica deste documento.
+      </p>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section>
+      <h2>6. Feedback do Documento</h2>
+      <p>Esse artigo foi útil?</p>
+
+      <div id="feedback-box">
+        <button onclick="sendFeedback('sim')">Sim</button>
+        <button onclick="sendFeedback('nao')">Não</button>
+      </div>
+
+      <p id="feedback-msg" class="success-text" style="display:none;">
+        Obrigado por seu feedback!
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Suporte e Links Úteis</h2>
+      <p>
+        Caso precise revisar as regras de reembolso e posse de propriedades, acesse o nosso documento de Termos de Uso.
+      </p>
+      <p class="links-suporte">
+        <a href="termosdeuso.html">Termos de Uso</a> • 
+        <a href="faq.html">FAQ</a> • 
+        <a href="https://discord.gg/ektXyWvjNK" target="_blank" rel="noopener noreferrer">Discord</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© BuildServer Store - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function sendFeedback(type) {
+      document.getElementById("feedback-box").style.display = "none";
+      document.getElementById("feedback-msg").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
